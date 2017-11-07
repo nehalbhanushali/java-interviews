@@ -262,9 +262,10 @@ Java Basics
 
     The garbage collector first performs a task called marking. The garbage collector traverses the application graph, starting with the root objects; those are objects that are represented by all active stack frames and all the static variables loaded into the system. Each object the garbage collector meets is marked as being used, and will not be deleted in the sweeping stage. The sweeping stage is where the deletion of objects take place.
 
-50. **Java de-compiler, when it could be helpful except studying, learning, stealing**
+50. **Java de-compiler**
 
-    Recovering lost sources?TODO????????
+    Recovering lost source. 
+    jad <class_name>.class
 
 51. **How is the virtual space divided in Java?**
 
