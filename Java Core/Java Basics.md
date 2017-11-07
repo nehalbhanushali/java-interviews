@@ -25,7 +25,7 @@ Java Basics
         inner class -- accessible from anywhere.  
         nested class -- accessible from anywhere.  
     * private  
-        class -- only for inner classes.  
+        class -- only inner classes can be private (accesible to outer class).  
         method -- accessible only from the class where it is declared. Cannot be overridden  
         variable -- accessible only from the class where it is declared  
         inner class -- same  
