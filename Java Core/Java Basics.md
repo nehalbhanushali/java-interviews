@@ -43,18 +43,14 @@ Java Basics
         inner class -- same  
         nested class -- same 
 
-5. **What is an abstract class?**
+5. **What is an abstract class? What is the use of an Abstract class with 0 abstract methods? TBA**
 
-    An abstract class is a java class that has one or more abstract methods (no body). Abstract classes cannot be instantiated. Abstract class defines an interface that has to be implemented by all its subclasses.
+    An abstract class is a java class that has zero or more abstract methods (no body). Abstract classes cannot be instantiated. Abstract class defines an interface that has to be implemented by all its subclasses.
 
 6. **What is static in java?**
-
-    static is Java Language keyword.  
-    a) When used with a method defines a method of a class.  
-    b) When used with a field defines a class field.  
-    c) When used on an nested class declaration defines a static nested class.  
-    d) Also can be used for static initialization block.  
-    e) Can be used as a static initialization block
+    
+    Purpose -- In object-oriented programming with classes, a class variable is a variable defined in a class of which a single copy exists. This type of variables can be declared static.
+    Features -- In Java, a static member is a member of a class that isn't associated with an instance of a class. Instead, the member belongs to the class itself. As a result, you can access the static member without first creating a class instance
 
 7. **What is final?**
 
@@ -84,9 +80,9 @@ Java Basics
 
 12. **What is Overriding?**
 
-    Changing method behavior in the subclasses.
+    Changing method behavior or functionality in the subclasses. Give example.
 
-13. **What are different types of inner classes?**
+13. **What are different types of inner classe?**
 
     if declared with static -- it's nested class. Nested classes are fairly independent and treated as top-level classes. But the constructor call is different.
     To construct one: new OuterClassNeme.InnerClassName().
@@ -99,7 +95,7 @@ Java Basics
 
 14. **Are the imports checked for validity at compile time? e.g. will the code containing an import such as java.lang.ABCD compile?**
 
-    Yes, they are checked. No it won't compile.
+    Yes, they are checked. No it won't compile.Eg. If Jars are not present, you try to import them, you get compile time error.
 
 15. **Does importing a package imports the sub-packages as well? e.g. Does importing com.MyTest.* also** import com.MyTest.UnitTests.*?
 
@@ -212,7 +208,7 @@ Java Basics
     | double        | 8 bytes          |                                         |
 
 
-40. **Contract between equals() and hashCode()**
+40. **Contrast between equals() and hashCode()**
 
     if a.equals(b) returns true then a.hashCode() == b.hashCode() is also true. Note that equal hashCode doesn't mean anything.
 
