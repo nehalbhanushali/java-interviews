@@ -12,7 +12,7 @@ Note : NR : Needs revision
 - [ ] Q4: Simulation, Random, Seed (IoT project related)  
 
 - [ ] Q5: Truely singleton and efficient design in multithreaded scenario. 
- - Ans:double null check, ine inside the lock , one outside on the volatile instance, etc)
+ - Ans:double null check, ine inside the lock , one outside on the volatile instance, etc) OPTIMISTIC RETRYING
  
 - [ ] Q6: Checked Exceptions v/s unchecked.
 
