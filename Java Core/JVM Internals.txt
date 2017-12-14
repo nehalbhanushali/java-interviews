@@ -49,3 +49,7 @@ http://www.artima.com/insidejvm/ed2/jvm.html
 30. An application has a lot of threads and is running out of memory, why?
 31. Types of GC
 32. Generations of heap space
+33. How many Heap areas are allocated for JVM?  Ans : 1 for every JVM
+34. How to set Heap sizes? 
+Ans - For Max heap size -  ```java -Xmx512m <java_file_name>```
+      For Min heap size -  ```java -Xms512m <java_file_name>```
