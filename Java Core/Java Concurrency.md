@@ -75,9 +75,9 @@ A thread can be in only one state at a given point in time. These states are vir
         }
 
         Thread t = new MyThred();
-        t.start();
-```
+        t.start();```
     c)
+    ```
         class MySomething extends Something {
             public void doSomeStuff() {...}
         }
@@ -86,8 +86,8 @@ A thread can be in only one state at a given point in time. These states are vir
             public void run(){
                 instanceOfMySomething.doSomeStuff();
             }
-        }).start();
-
+        }).start();```
+    
     The main difference between these two approaches is that in case (a) you are able to extend the class you need while still being able to run your code in a separate thread. In case (b) you are already extending from the Thread class which limits your options. In general following one of the good OOP practices (Favor composition over inheritance) option (a) is preferable. Option (c) is also cute since it decouples your class and the fact that its code will be run in a separate thread. In other words you can still call instanceOfMySomething.doSomeStuff() regardless from a new thread or from the same.
 
 7. Synchronization of Java blocks and methods
