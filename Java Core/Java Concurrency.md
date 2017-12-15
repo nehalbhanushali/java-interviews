@@ -66,7 +66,9 @@ A thread can be in only one state at a given point in time. These states are vir
         r.start();
 
     b)
-        class MyThread extends Thread {
+    
+      ```
+      class MyThread extends Thread {
             public void run(){
                 // code that has to run in a thread
             }
@@ -74,7 +76,7 @@ A thread can be in only one state at a given point in time. These states are vir
 
         Thread t = new MyThred();
         t.start();
-
+```
     c)
         class MySomething extends Something {
             public void doSomeStuff() {...}
