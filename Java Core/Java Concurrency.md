@@ -5,15 +5,18 @@ Concurrency
 
     Several threads access common data. In order to keep the data in consistent state and prevent thread interference the access to it has to be synchronized (i.e. some ordering of data access has to be imposed).
     How?
-    ```synchronized(lock-obj)```
-    ``` {
+    ```
+    synchronized(lock-obj)
+    {
             ...
-    ```  }```
+    }
     ```
     
-    ``` public synchronized <returntype> method_name(this)```
-    ``` {
-    ```  }```
+    ``` 
+    public synchronized <returntype> method_name()
+    {
+            ...
+    }
     ```
     
 2. Explain different ways of using thread?  
