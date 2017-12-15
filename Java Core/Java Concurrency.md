@@ -54,7 +54,7 @@ A thread can be in only one state at a given point in time. These states are vir
 6. Describe different ways to create a thread.
 
     a)
-    
+        ```
         class MyRunnable extends SomeOtherClass implements Runnable {
             public void run(){
                 // code that has to run in a thread
@@ -64,6 +64,7 @@ A thread can be in only one state at a given point in time. These states are vir
         MyRunnable r = new MyRunnable();
         Thread t = new Thread(r);
         r.start();
+        ```
 
     b)
     
@@ -76,11 +77,12 @@ A thread can be in only one state at a given point in time. These states are vir
 
         Thread t = new MyThred();
         t.start(); 
+        
         ```
     
     c) 
    
-   ```
+        ```
         class MySomething extends Something {
             public void doSomeStuff() {...}
         }
@@ -90,6 +92,7 @@ A thread can be in only one state at a given point in time. These states are vir
                 instanceOfMySomething.doSomeStuff();
             }
         }).start(); 
+        
         ```
     
     The main difference between these two approaches is that in case (a) you are able to extend the class you need while still being able to run your code in a separate thread. In case (b) you are already extending from the Thread class which limits your options. In general following one of the good OOP practices (Favor composition over inheritance) option (a) is preferable. Option (c) is also cute since it decouples your class and the fact that its code will be run in a separate thread. In other words you can still call instanceOfMySomething.doSomeStuff() regardless from a new thread or from the same.
@@ -116,6 +119,7 @@ A thread can be in only one state at a given point in time. These states are vir
     Synchronization primitives: Semaphore, CyclicBarrier, CountDownLatch, Lock, ReentrantLock
     Threads: Executors, Callable and Future
     Data: Synchronized collections (CopyOnWriteArrayList, ConcurrentHashMap, BlockingQueue)
+    See [JAVA DOCS UTIL](https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/package-summary.html)
 
 11. ThreadLocal, what for are they needed? Does child thread see the value of parent ThreadLocal?
 
