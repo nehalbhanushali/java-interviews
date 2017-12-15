@@ -5,8 +5,19 @@ Collections
 1. Draw Collections Framework Class Diagram
 
     interface Iterable
+     public interface Iterable<T>
+Implementing this interface allows an object to be the target of the "for-each loop" statement. See For-each Loop
+
+public interface Iterator<E>
+An iterator over a collection. Iterator takes the place of Enumeration in the Java Collections Framework. Iterators differ from enumerations in two ways:
+Iterators allow the caller to remove elements from the underlying collection during the iteration with well-defined semantics.
+Method names have been improved.
+This interface is a member of the Java Collections Framework.
+
     interface Collection extends Iterable
+    
     interfaces List, Queue, Set extend Collection
+    
     interface SortedSet extends Set
     interface Map
     interface SortedMap extends Map
