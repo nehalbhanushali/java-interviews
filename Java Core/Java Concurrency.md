@@ -31,9 +31,21 @@ Concurrency
     * The scheduler is run every **time slice** to choose the next process to run (it may happen that it's the same process during few time slices in a row, or it may happen that every time slice a different process is executed )
     * To apply these terms to Java world -- replace the "process" with "thread", since the ideas behind scheduling processes in OS are the same as scheduling threads in an application.
 
-4. When a thread is created and started, what is its initial state?
-
-    The thread is then in "RUNNABLE" state.
+4. States of Thread?
+A thread state. A thread can be in one of the following states:
+* **NEW**
+A thread that has not yet started is in this state.
+* **RUNNABLE**
+A thread executing in the Java virtual machine is in this state.
+* **BLOCKED**
+A thread that is blocked waiting for a monitor lock is in this state.
+* **WAITING**
+A thread that is waiting indefinitely for another thread to perform a particular action is in this state.
+* **TIMED_WAITING**
+A thread that is waiting for another thread to perform an action for up to a specified waiting time is in this state.
+* **TERMINATED**
+A thread that has exited is in this state.
+A thread can be in only one state at a given point in time. These states are virtual machine states which do not reflect any operating system thread states.
 
 5. Thread vs Runnable, run() vs start()
 
