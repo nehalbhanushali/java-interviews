@@ -27,12 +27,9 @@ Concurrency
     * Create thread to do some kind of isolated processing, wait for the processing to finish, kill the thread. Create new threads when needed
 
 3. What is the difference between preemptive scheduling and time slicing?
-
-    Not exactly a correct question.
-
-    A scheduler can be preemptive (it's capable to force a process to interrupt its execution and resume it in some time) and non-preemptive (which is unable to interrupt a process and relies on the processes themselves that voluntarily give control to other tasks). Time slicing is a usual technique that is used in a preemptive multitasking system. The scheduler is run every time slice to choose the next process to run (it may happen that it's the same process during few time slices in a row, or it may happen that every time slice a different process is executed )
-
-    To apply these terms to Java world -- replace the "process" with "thread", since the ideas behind scheduling processes in OS are the same as scheduling threads in an application.
+    * A scheduler can be preemptive (it's capable to force a process to interrupt its execution and resume it in some time) and non-preemptive (which is unable to interrupt a process and relies on the processes themselves that voluntarily give control to other tasks). Time slicing is a usual technique that is used in a preemptive multitasking system. 
+    * The scheduler is run every **time slice** to choose the next process to run (it may happen that it's the same process during few time slices in a row, or it may happen that every time slice a different process is executed )
+    * To apply these terms to Java world -- replace the "process" with "thread", since the ideas behind scheduling processes in OS are the same as scheduling threads in an application.
 
 4. When a thread is created and started, what is its initial state?
 
@@ -45,6 +42,7 @@ Concurrency
 6. Describe different ways to create a thread.
 
     a)
+    
         class MyRunnable extends SomeOtherClass implements Runnable {
             public void run(){
                 // code that has to run in a thread
