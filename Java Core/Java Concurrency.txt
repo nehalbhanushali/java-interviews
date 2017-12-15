@@ -3,8 +3,10 @@ Concurrency
 ------------------------------------------------------------------------------------------
 1. Describe synchronization in respect to multi-threading. What is synchronization.
 
-    Several threads access common data. In order to keep the data in consistent state the access to it has to be synchronized (i.e. some ordering of data access has to be imposed).
-
+    Several threads access common data. In order to keep the data in consistent state and prevent thread interference the access to it has to be synchronized (i.e. some ordering of data access has to be imposed).
+    How?
+    Synchronized blocks(locks), etc
+    
 2. Explain different ways of using thread?  
 
     a) Create a long-running computation in a separate thread so the user interface (or whatever other part of the application) is not blocked.
@@ -207,6 +209,15 @@ Concurrency
 
     AtomicInteger is a class from java.util.concurrent package that provides thread-safe implementation of an Integer.
     More information on AtomicXXX can be found at http://docs.oracle.com/javase/6/docs/api/java/util/concurrent/atomic/package-summary.html
+    
+23 . Synchronized HashMap v/s ConcurrentHashMap：
+
+*Synchronized HashMap* : Each method is synchronized using an object level lock. So the get and put methods on synchMap acquire a lock.
+Locking the entire collection is a performance overhead. While one thread holds on to the lock, no other thread can use the collection.
+
+*ConcurrentHashMap (introduced in JDK 5 )* : There is no locking at the object level,The locking is at a much finer granularity. For a ConcurrentHashMap, the locks may be at a hashmap bucket level.
+The effect of lower level locking is that you can have concurrent readers and writers which is not possible for synchronized collections. This leads to much more scalability.
+ConcurrentHashMap does not throw a ConcurrentModificationException if one thread tries to modify it while another is iterating over it.
 
 
 ------------------------------------------------------------------------------------------
