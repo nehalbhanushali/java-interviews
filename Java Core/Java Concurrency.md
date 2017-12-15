@@ -19,12 +19,12 @@ Concurrency
     }
     ```
     
-2. Explain different ways of using thread?  
+2. Explain different ways of using thread? Or Use cases of Multi-threading?  
 
-    a) Create a long-running computation in a separate thread so the user interface (or whatever other part of the application) is not blocked.
-    b) separate out I/O operations which potentially can take a lot of time (e.g. reading from the network) for the same reason
-    c) process incoming requests in parallel (usually using thread pool of some size)
-    d) Create thread to do some kind of isolated processing, wait for the processing to finish, kill the thread. Create new threads when needed
+    * Create a long-running computation in a separate thread so the user interface (or whatever other part of the application) is not blocked.
+    * separate out I/O operations which potentially can take a lot of time (e.g. reading from the network) for the same reason
+    * process incoming requests in parallel (usually using thread pool of some size)
+    * Create thread to do some kind of isolated processing, wait for the processing to finish, kill the thread. Create new threads when needed
 
 3. What is the difference between preemptive scheduling and time slicing?
 
